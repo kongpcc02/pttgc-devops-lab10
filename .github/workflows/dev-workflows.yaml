@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: "pornpoi/pttgc-devops-lab10-cd"
-          ref: 'main'
+          ref: 'master'
           token: ${{ secrets.CD_PAT }}
       - name: Update image version
         run: yq -i e '.userService.tag="${{ github.sha }}"' values.yaml
